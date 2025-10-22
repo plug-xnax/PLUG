@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLUG</title>
+    <meta name="description" content="PLUG - скачать VST плагины, семплы и пресеты. Serum, Omnisphere, Nexus и другие.">
+    <meta name="keywords" content="vst плагины, семплы, пресеты, serum, omnisphere, музыка">
+    <link rel="icon" href="assets/xnax_logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo" >
+                <img src="assets/xnax_logo.ico" alt="x" class="logo-image" onclick="refreshPage()">
+                <span class="logo-text">PLUG</span>
+            </div>
+
+            <div class="news">
+                <!-- Когда-нибудь тут что-то будет...-->
+            </div>
+            
+            <div class="nav-links">
+                <a href="#search" class="nav-link" onclick="smoothScrollToSearch()">Вернуться наверх</a>
+                <a href="https://t.me/xnax_tg" class="btn btn-telegram" target="_blank">
+                    Telegram
+                </a>
+                <a href="https://www.youtube.com/@xnax019" class="btn btn-youtube" target="_blank">
+                    YouTube
+                </a>
+                <a href="https://boosty.to/xnax019" class="btn btn-boosty" target="_blank">
+                    Поддержать
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="filters-section">
+            <div class="filters-container glass-effect">
+                <div class="filter-tabs">
+                    <div class="filter-tab-group">
+                        <span class="filter-label">Тип:</span>
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-filter="type" value="all">Все</button>
+                            <button class="tab-btn" data-filter="type" value="plugin">Плагины</button>
+                            <button class="tab-btn" data-filter="type" value="bundle">Набор плагинов</button>
+                            <button class="tab-btn" data-filter="type" value="samplepack">Семпл паки</button>
+                            <button class="tab-btn" data-filter="type" value="presetSerum">Пресеты Serum</button>
+                            <button class="tab-btn" data-filter="type" value="daw">DAW</button>
+                            <button class="nope" data-filter="type" value="libsKontakt">Библиотеки Kontakt</button>
+                            <button class="nope" data-filter="type" value="courses">Курсы</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-tab-group">
+                        <span class="filter-label">Категория:</span>
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-filter="category" value="all">Все</button>
+                            <button class="tab-btn" data-filter="category" value="synth">Синтезаторы</button>
+                            <button class="tab-btn" data-filter="category" value="rompler">Семплеры</button>
+                            <button class="tab-btn" data-filter="category" value="guitar">Гитары</button>
+                            <button class="tab-btn" data-filter="category" value="piano">Пианино</button>
+                            <button class="tab-btn" data-filter="category" value="vocal">Вокал</button>
+                            <button class="tab-btn" data-filter="category" value="eq">Эквалайзеры</button>
+                            <button class="tab-btn" data-filter="category" value="compressor">Компрессоры</button>
+                            <button class="tab-btn" data-filter="category" value="satur">Сатураторы</button>
+                            <button class="tab-btn" data-filter="category" value="reverb">Ревербы</button>
+                            <button class="tab-btn" data-filter="category" value="drums">Барабаны</button>
+                            <button class="tab-btn" data-filter="category" value="various">Разное</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-reset-filters" onclick="resetFilters()">
+                    ↻ Сбросить все
+                </button>
+            </div>
+        </section>
+
+        <section class="search-section" id="search">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input glass-effect" 
+                    id="searchInput"
+                    placeholder="Поиск плагинов, семплов, пресетов..."
+                >
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+        </section>
+
+        <section class="plugins-grid" id="pluginsGrid">
+            <!-- ... -->
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+*.zip
+*.rar
+*.backup
+*.bak
