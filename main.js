@@ -308,7 +308,7 @@ const plugins = [
     {
         id: 27,
         name: "CMT Bitcrusher 1.01",
-        description: "Легенда саундклауда 2025 o_O (Скачивание через Mediaget!)",
+        description: "Легенда саундклауда 2025 o_O (Скачивание через Mediafire!)",
         image: "assets/card_imgs/cmtbitcrusher.jpg",
         size: "0.78 MB",
         rawSize: 0.78,
