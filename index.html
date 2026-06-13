@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header no-select">
         <nav class="nav">
             <div class="logo" >
                 <img src="assets/xnax_logo.ico" alt="x" class="logo-image" onclick="refreshPage()">
                 <span class="logo-text">PLUG</span>
+                <a class="version" href="https://github.com/plug-xnax/PLUG" target="_blank">0.2.0</a>
             </div>
 
             <div class="news">
-                <!-- Когда-нибудь тут что-то будет...-->
+                <!-- ... -->
             </div>
             
             <div class="nav-links">
@@ -40,7 +41,7 @@
     </header>
 
     <main class="main">
-        <section class="filters-section">
+        <section class="filters-section no-select">
             <div class="filters-container glass-effect">
                 <div class="filter-tabs">
                     <div class="filter-tab-group">
@@ -52,8 +53,6 @@
                             <button class="tab-btn" data-filter="type" value="samplepack">Семпл паки</button>
                             <button class="tab-btn" data-filter="type" value="presetSerum">Пресеты Serum</button>
                             <button class="tab-btn" data-filter="type" value="daw">DAW</button>
-                            <button class="nope" data-filter="type" value="libsKontakt">Библиотеки Kontakt</button>
-                            <button class="nope" data-filter="type" value="courses">Курсы</button>
                         </div>
                     </div>
                     
@@ -90,13 +89,11 @@
                     id="searchInput"
                     placeholder="Поиск плагинов, семплов, пресетов..."
                 >
-                <div class="search-suggestions" id="searchSuggestions"></div>
+                <div class="search-suggestions no-select" id="searchSuggestions"></div>
             </div>
         </section>
 
-        <section class="plugins-grid" id="pluginsGrid">
-            <!-- ... -->
-        </section>
+        <section class="plugins-grid no-select" id="pluginsGrid"></section>
     </main>
 
     <script src="main.js"></script>
